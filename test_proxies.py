@@ -73,13 +73,6 @@ class ProxyTestMixin:
 
         self.checkBasics(v)
 
-
-
-
-
-
-
-
     def checkList(self, v):
         p = self.proxied(v)
         for i in range(len(v)):
@@ -167,7 +160,3 @@ def additional_tests():
     return doctest.DocFileSuite(
         'README.txt', 'quirky-tests.txt', optionflags=doctest.ELLIPSIS,
     )
-
-
-
-

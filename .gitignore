@@ -3,3 +3,6 @@ __pycache__/
 build/
 dist/
 ProxyTypes.egg-info/
+*.out
+*.geany
+.tox/

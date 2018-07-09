@@ -280,6 +280,28 @@ you don't want to use any of the standard three ways of defining
 to subclass ``AbstractProxy`` or ``AbstractWrapper`` and provide your own
 way of defining ``__subject__``.
 
+Tests
+-----
+
+To run unittests across multiple Python versions, first install the necessary Python versions:
+
+    sudo add-apt-repository ppa:deadsnakes/ppa
+    sudo apt-get update
+    sudo apt-get install python-dev python3.4-minimal python3.4-dev python3.5-minimal python3.5-dev python3.6 python3.6-dev
+
+Then to run all [tests](http://tox.readthedocs.org/en/latest/):
+
+    tox
+
+To run tests for a specific environment (e.g. Python 2.7):
+    
+    tox -e py27
+
+To run a specific test:
+    
+    export TESTNAME=.additional_tests; tox -e py34
+    
+    export TESTNAME=.TestObjectProxy.testNumbers; tox -e py36
 
 Mailing List
 ------------
